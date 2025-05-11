@@ -35,6 +35,7 @@
 
     .right-column {
       flex: 1;
+      padding-left: 60px; /* Moved form more to the right */
     }
 
     .form-group {
@@ -79,14 +80,18 @@
       border-radius: 8px;
     }
 
-    footer {
-      margin-top: 40px;
+    .intro-text {
+      margin-bottom: 20px;
+    }
+
+    .form-footer {
+      margin-top: 25px;
       font-size: 0.9em;
       color: #aaa;
     }
 
-    .intro-text {
-      margin-bottom: 20px;
+    .form-footer a {
+      color: #aaa;
     }
   </style>
 </head>
@@ -98,12 +103,10 @@
         <h3>Bangkok</h3>
         <img src="cinatown.jpeg" alt="Bangkok">
       </div>
-
       <div class="location">
         <h3>Chiang Mai</h3>
         <img src="Chiang Mai.jpg" alt="Chiang Mai">
       </div>
-
       <div class="location">
         <h3>Southern Thailand</h3>
         <img src="southern-thailand-3.jpg" alt="Southern Thailand">
@@ -114,6 +117,7 @@
     <div class="right-column">
       <div class="intro-text">
         <h1>Teach English in Thailand</h1>
+        <img src="teaching.jpg" alt="Teach English" style="width: 100%; border-radius: 8px; margin: 10px 0;">
         <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
       </div>
 
@@ -150,11 +154,11 @@
 
         <button type="submit">Submit Application</button>
       </form>
+
+      <div class="form-footer">
+        <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
+      </div>
     </div>
   </div>
-
-  <footer>
-    <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
-  </footer>
 </body>
 </html>
