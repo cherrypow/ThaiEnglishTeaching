@@ -13,33 +13,40 @@
       display: flex;
       justify-content: center;
     }
+
     h1 {
       color: #4da6ff;
+      margin-bottom: 10px;
     }
+
     .container {
       display: flex;
       max-width: 1000px;
       width: 100%;
-      margin: auto;
       background-color: #2a2a2a;
       padding: 20px;
       border-radius: 10px;
     }
+
     .left-column {
       flex: 1;
       margin-right: 20px;
     }
+
     .right-column {
       flex: 1;
     }
+
     .form-group {
       margin-bottom: 15px;
     }
+
     label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
     }
+
     input, textarea, select {
       width: 100%;
       padding: 8px;
@@ -49,6 +56,7 @@
       border: 1px solid #666;
       border-radius: 4px;
     }
+
     button {
       padding: 10px 20px;
       background-color: #0073e6;
@@ -57,48 +65,43 @@
       cursor: pointer;
       border-radius: 5px;
     }
+
     button:hover {
       background-color: #005bb5;
     }
+
     .location {
       margin-bottom: 20px;
     }
+
     .location img {
       width: 100%;
       border-radius: 8px;
     }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #aaa;
     }
-    .images-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .images-row img {
-      width: 48%; /* Adjusted to fit two images side by side */
-      border-radius: 8px;
+
+    .intro-text {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Left Column: Images -->
     <div class="left-column">
-      <h1>Teach English in Thailand</h1>
-      <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
+      <div class="location">
+        <h3>Bangkok</h3>
+        <img src="cinatown.jpeg" alt="Bangkok">
+      </div>
 
-      <div class="images-row">
-        <div class="location">
-          <h3>Bangkok</h3>
-          <img src="cinatown.jpeg" alt="Bangkok">
-        </div>
-
-        <div class="location">
-          <h3>Chiang Mai</h3>
-          <img src="Chiang Mai.jpg" alt="Chiang Mai">
-        </div>
+      <div class="location">
+        <h3>Chiang Mai</h3>
+        <img src="Chiang Mai.jpg" alt="Chiang Mai">
       </div>
 
       <div class="location">
@@ -107,7 +110,13 @@
       </div>
     </div>
 
+    <!-- Right Column: Title + Form -->
     <div class="right-column">
+      <div class="intro-text">
+        <h1>Teach English in Thailand</h1>
+        <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
+      </div>
+
       <form action="https://formspree.io/f/yourformid" method="POST" enctype="multipart/form-data">
         <div class="form-group">
           <label for="name">Full Name</label>
