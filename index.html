@@ -14,11 +14,22 @@
       color: #4da6ff;
     }
     .container {
-      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
       margin: auto;
-      background-color: #2a2a2a;
+    }
+    .left-column, .right-column {
+      flex: 1;
       padding: 20px;
-      border-radius: 10px;
+      margin: 10px;
+    }
+    .left-column {
+      max-width: 45%;
+    }
+    .right-column {
+      max-width: 45%;
     }
     .form-group {
       margin-bottom: 15px;
@@ -50,11 +61,12 @@
     }
     .images-section {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
+      flex-direction: column;
+      gap: 20px;
     }
     .images-section img {
-      width: 48%;
+      width: 100%;
+      height: auto;
       border-radius: 8px;
     }
     footer {
@@ -62,56 +74,81 @@
       font-size: 0.9em;
       color: #aaa;
     }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-group img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .right-column img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Teach English in Thailand</h1>
-    <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
+    <div class="left-column">
+      <h1>Teach English in Thailand</h1>
+      <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
 
-    <!-- Two images displayed on screen -->
-    <div class="images-section">
-      <img src="cinatown.jpeg" alt="Teaching in Thailand">
-      <img src="teaching.jpg" alt="English Classroom">
+      <!-- Images of locations -->
+      <div class="images-section">
+        <h3>Bangkok</h3>
+        <img src="bangkok.jpg" alt="Bangkok Teaching Location">
+        <h3>Chiang Mai</h3>
+        <img src="chiangmai.jpg" alt="Chiang Mai Teaching Location">
+        <h3>Southern Thailand</h3>
+        <img src="southernthailand.jpg" alt="Southern Thailand Teaching Location">
+      </div>
     </div>
 
-    <form action="https://formspree.io/f/yourformid" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input name="name" type="text" required />
+    <div class="right-column">
+      <div class="form-container">
+        <!-- Teacher and students image -->
+        <img src="teacher_students.jpg" alt="Teacher with Students" />
+        <form action="https://formspree.io/f/yourformid" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input name="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input name="email" type="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="resume">Upload Resume (PDF)</label>
+            <input name="resume" type="file" accept=".pdf" required />
+          </div>
+
+          <div class="form-group">
+            <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
+            <input name="degree" type="file" accept=".pdf" required />
+          </div>
+
+          <div class="form-group">
+            <label for="passport_pic">Upload Passport Photo (Image)</label>
+            <input name="passport_pic" type="file" accept="image/*" required />
+          </div>
+
+          <div class="form-group">
+            <label for="areas">Preferred Teaching Locations (optional)</label>
+            <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
+          </div>
+
+          <button type="submit">Submit Application</button>
+        </form>
       </div>
-
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input name="email" type="email" required />
-      </div>
-
-      <div class="form-group">
-        <label for="resume">Upload Resume (PDF)</label>
-        <input name="resume" type="file" accept=".pdf" required />
-      </div>
-
-      <div class="form-group">
-        <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
-        <input name="degree" type="file" accept=".pdf" required />
-      </div>
-
-      <div class="form-group">
-        <label for="passport_pic">Upload Passport Photo (Image)</label>
-        <input name="passport_pic" type="file" accept="image/*" required />
-      </div>
-
-      <div class="form-group">
-        <label for="areas">Preferred Teaching Locations (optional)</label>
-        <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
-      </div>
-
-      <button type="submit">Submit Application</button>
-    </form>
-
-    <footer>
-      <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
-    </footer>
+    </div>
   </div>
+
+  <footer>
+    <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
+  </footer>
 </body>
 </html>
