@@ -72,6 +72,15 @@
       font-size: 0.9em;
       color: #aaa;
     }
+    .images-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .images-row img {
+      width: 48%; /* Adjusted to fit two images side by side */
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -80,14 +89,16 @@
       <h1>Teach English in Thailand</h1>
       <p>Are you ready to start your teaching adventure in Thailand? Submit your details below to begin the process.</p>
 
-      <div class="location">
-        <h3>Bangkok</h3>
-        <img src="cinatown.jpeg" alt="Bangkok">
-      </div>
+      <div class="images-row">
+        <div class="location">
+          <h3>Bangkok</h3>
+          <img src="cinatown.jpeg" alt="Bangkok">
+        </div>
 
-      <div class="location">
-        <h3>Chiang Mai</h3>
-        <img src="Chiang Mai.jpg" alt="Chiang Mai">
+        <div class="location">
+          <h3>Chiang Mai</h3>
+          <img src="Chiang Mai.jpg" alt="Chiang Mai">
+        </div>
       </div>
 
       <div class="location">
