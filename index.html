@@ -6,7 +6,7 @@
   <style>
     body {
       background-color: #ffffff;
-      font-family: "Times New Roman", Times, serif;
+      font-family: Consolas, sans-serif;
       color: #000000;
       margin: 0;
       padding: 20px;
@@ -32,29 +32,8 @@
     }
 
     .left-column {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
       flex: 1;
       margin-right: 20px;
-    }
-
-    .location {
-      text-align: center;
-    }
-
-    .location h3 {
-      font-weight: normal;
-      margin-bottom: 8px;
-      font-size: 1em;
-      font-family: "Times New Roman", Times, serif;
-    }
-
-    .location img {
-      width: 100%;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
     }
 
     .right-column {
@@ -95,6 +74,17 @@
       background-color: #005bb5;
     }
 
+    .location {
+      margin-bottom: 20px;
+    }
+
+    .location img {
+     width: 80%;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+    }
+
     .intro-text {
       margin-bottom: 20px;
     }
@@ -120,7 +110,7 @@
     </div>
     <div class="location">
       <h3>Tokyo</h3>
-      <img src="Tokyo.jpg" alt="Tokyo">
+      <img src="Tokyo.jpg" alt="Chiang Mai">
     </div>
     <div class="location">
       <h3>South Thailand</h3>
@@ -128,67 +118,75 @@
     </div>
     <div class="location">
       <h3>Ho Chi Minh City</h3>
-      <img src="Ho Chi Minh City.jpg" alt="Ho Chi Minh City">
+      <img src="Ho Chi Minh City.jpg" alt="Southern Thailand">
     </div>
     <div class="location">
       <h3>Okinawa</h3>
-      <img src="Okinawa.jpg" alt="Okinawa">
+      <img src="Okinawa.jpg" alt="Vietnam">
     </div>
     <div class="location">
       <h3>Cambodia</h3>
-      <img src="Cambodia.jpg" alt="Cambodia">
+      <img src="Cambodia.jpg" alt="Japan">
     </div>
   </div>
 
-  <!-- Right Column: Title + Form -->
-  <div class="right-column">
-    <div class="intro-text">
-      <h1>Teach English Abroad</h1>
-      <p><strong>Get ready to start your adventure abroad!</strong><br>
-      We have placements from Thailand to Japan and everywhere in between!<br>
-      Send us your credentials and please include your WhatsApp if available.<br>
-      We look forward to speaking with you!</p>
-      <img src="teaching.jpg" alt="Teach English" style="width: 100%; border-radius: 8px; margin: 10px 0;">
-    </div>
-
-    <form action="submit.php" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input name="name" type="text" required />
+    <!-- Right Column: Title + Form -->
+    <div class="right-column">
+      <div class="intro-text">
+        <h1>Teach English Abroad</h1>
+        <p><strong>Get ready to start your adventure abroad!</strong><br>
+        We have placements from Thailand to Japan and everywhere in between!<br>
+        Send us your credentials and please include your WhatsApp if available.<br>
+        We look forward to speaking with you!</p>
+        <img src="teaching.jpg" alt="Teach English" style="width: 100%; border-radius: 8px; margin: 10px 0;">
       </div>
 
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input name="email" type="email" required />
-      </div>
+      <form action="submit.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input name="name" type="text" required />
+        </div>
 
-      <div class="form-group">
-        <label for="resume">Upload Resume (PDF)</label>
-        <input name="resume" type="file" accept=".pdf" required />
-      </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input name="email" type="email" required />
+        </div>
 
-      <div class="form-group">
-        <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
-        <input name="degree" type="file" accept=".pdf" required />
-      </div>
+        <div class="form-group">
+          <label for="resume">Upload Resume (PDF)</label>
+          <input name="resume" type="file" accept=".pdf" required />
+        </div>
 
-      <div class="form-group">
-        <label for="passport_pic">Upload Passport Photo (Image)</label>
-        <input name="passport_pic" type="file" accept="image/*" required />
-      </div>
+        <div class="form-group">
+          <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
+          <input name="degree" type="file" accept=".pdf" required />
+        </div>
 
-      <div class="form-group">
-        <label for="areas">Preferred Teaching Locations (optional)</label>
-        <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
-      </div>
+        <div class="form-group">
+          <label for="passport_pic">Upload Passport Photo (Image)</label>
+          <input name="passport_pic" type="file" accept="image/*" required />
+        </div>
+
+        <div class="form-group">
+          <label for="areas">Preferred Teaching Locations (optional)</label>
+          <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
+        </div>
 
       <button type="submit">Submit Application</button>
-    </form>
+</form>
 
-    <div class="form-footer">
-      <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
+<!-- Textbox BELOW the form -->
+<div class="form-group" style="margin-top: 20px;">
+  <label for="comments">Additional Comments (optional)</label>
+  <textarea name="comments" rows="4" placeholder="We value our teachers and want to find the best placement for you. It is important to have all necessary qualifications. We look forward to speaking with you!" style="width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #999; border-radius: 4px;"></textarea>
+</div>
+
+<div class="form-footer">
+  <p>For questions, contact us at <a href="...">info@teachthailand.org</a>.</p>
+</div>
+
+      </div>
     </div>
   </div>
-</div>
 </body>
 </html>
