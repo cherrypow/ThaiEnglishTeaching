@@ -6,7 +6,7 @@
   <style>
     body {
       background-color: #ffffff;
-      font-family: Consolas, sans-serif;
+      font-family: "Times New Roman", Times, serif;
       color: #000000;
       margin: 0;
       padding: 20px;
@@ -32,8 +32,29 @@
     }
 
     .left-column {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
       flex: 1;
       margin-right: 20px;
+    }
+
+    .location {
+      text-align: center;
+    }
+
+    .location h3 {
+      font-weight: normal;
+      margin-bottom: 8px;
+      font-size: 1em;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .location img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
     }
 
     .right-column {
@@ -74,17 +95,6 @@
       background-color: #005bb5;
     }
 
-    .location {
-      margin-bottom: 20px;
-    }
-
-    .location img {
-     width: 80%;
-  border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-    }
-
     .intro-text {
       margin-bottom: 20px;
     }
@@ -110,7 +120,7 @@
     </div>
     <div class="location">
       <h3>Tokyo</h3>
-      <img src="Tokyo.jpg" alt="Chiang Mai">
+      <img src="Tokyo.jpg" alt="Tokyo">
     </div>
     <div class="location">
       <h3>South Thailand</h3>
@@ -118,67 +128,67 @@
     </div>
     <div class="location">
       <h3>Ho Chi Minh City</h3>
-      <img src="Ho Chi Minh City.jpg" alt="Southern Thailand">
+      <img src="Ho Chi Minh City.jpg" alt="Ho Chi Minh City">
     </div>
     <div class="location">
       <h3>Okinawa</h3>
-      <img src="Okinawa.jpg" alt="Vietnam">
+      <img src="Okinawa.jpg" alt="Okinawa">
     </div>
     <div class="location">
       <h3>Cambodia</h3>
-      <img src="Cambodia.jpg" alt="Japan">
+      <img src="Cambodia.jpg" alt="Cambodia">
     </div>
   </div>
 
-    <!-- Right Column: Title + Form -->
-    <div class="right-column">
-      <div class="intro-text">
-        <h1>Teach English Abroad</h1>
-        <p><strong>Get ready to start your adventure abroad!</strong><br>
-        We have placements from Thailand to Japan and everywhere in between!<br>
-        Send us your credentials and please include your WhatsApp if available.<br>
-        We look forward to speaking with you!</p>
-        <img src="teaching.jpg" alt="Teach English" style="width: 100%; border-radius: 8px; margin: 10px 0;">
+  <!-- Right Column: Title + Form -->
+  <div class="right-column">
+    <div class="intro-text">
+      <h1>Teach English Abroad</h1>
+      <p><strong>Get ready to start your adventure abroad!</strong><br>
+      We have placements from Thailand to Japan and everywhere in between!<br>
+      Send us your credentials and please include your WhatsApp if available.<br>
+      We look forward to speaking with you!</p>
+      <img src="teaching.jpg" alt="Teach English" style="width: 100%; border-radius: 8px; margin: 10px 0;">
+    </div>
+
+    <form action="submit.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input name="name" type="text" required />
       </div>
 
-      <form action="submit.php" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input name="name" type="text" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input name="email" type="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="resume">Upload Resume (PDF)</label>
-          <input name="resume" type="file" accept=".pdf" required />
-        </div>
-
-        <div class="form-group">
-          <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
-          <input name="degree" type="file" accept=".pdf" required />
-        </div>
-
-        <div class="form-group">
-          <label for="passport_pic">Upload Passport Photo (Image)</label>
-          <input name="passport_pic" type="file" accept="image/*" required />
-        </div>
-
-        <div class="form-group">
-          <label for="areas">Preferred Teaching Locations (optional)</label>
-          <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
-        </div>
-
-        <button type="submit">Submit Application</button>
-      </form>
-
-      <div class="form-footer">
-        <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input name="email" type="email" required />
       </div>
+
+      <div class="form-group">
+        <label for="resume">Upload Resume (PDF)</label>
+        <input name="resume" type="file" accept=".pdf" required />
+      </div>
+
+      <div class="form-group">
+        <label for="degree">Upload Bachelor’s Certificate (PDF)</label>
+        <input name="degree" type="file" accept=".pdf" required />
+      </div>
+
+      <div class="form-group">
+        <label for="passport_pic">Upload Passport Photo (Image)</label>
+        <input name="passport_pic" type="file" accept="image/*" required />
+      </div>
+
+      <div class="form-group">
+        <label for="areas">Preferred Teaching Locations (optional)</label>
+        <textarea name="areas" rows="4" placeholder="Bangkok, Chiang Mai, Phuket..."></textarea>
+      </div>
+
+      <button type="submit">Submit Application</button>
+    </form>
+
+    <div class="form-footer">
+      <p>For questions, contact us at <a href="mailto:info@teachthailand.org">info@teachthailand.org</a>.</p>
     </div>
   </div>
+</div>
 </body>
 </html>
